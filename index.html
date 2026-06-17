@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Study Tracker Dashboard
+    </title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            📚 StudyTracker
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li class="active">
+
+                    Dashboard
+
+                </li>
+
+                <li>
+
+                    Sessions
+
+                </li>
+
+                <li>
+
+                    Analytics
+
+                </li>
+
+                <li>
+
+                    Calendar
+
+                </li>
+
+                <li>
+
+                    Goals
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>
+
+                    Welcome Back 👋
+
+                </h1>
+
+                <p>
+
+                    Track your learning progress efficiently.
+
+                </p>
+
+            </div>
+
+            <div class="profile">
+
+                LK
+
+            </div>
+
+        </header>
+
+        <!-- Analytics Cards -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <span class="card-label">
+
+                    Total Subjects
+
+                </span>
+
+                <h2 id="totalSubjects">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="card-label">
+
+                    Study Hours
+
+                </span>
+
+                <h2 id="studyHours">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="card-label">
+
+                    Current Streak
+
+                </span>
+
+                <h2 id="studyStreak">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="card-label">
+
+                    Goal Completion
+
+                </span>
+
+                <h2 id="goalCompletion">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- Goal Progress -->
+
+        <section class="goal-section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Daily Goal
+
+                </h2>
+
+            </div>
+
+            <div class="goal-box">
+
+                <input
+                    type="number"
+                    id="dailyGoal"
+                    placeholder="Enter daily study goal">
+
+                <button
+                    id="saveGoalBtn">
+
+                    Save Goal
+
+                </button>
+
+            </div>
+
+            <div class="progress-track">
+
+                <div
+                    id="progressBar"
+                    class="progress-fill">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Add Study Session -->
+
+        <section class="study-form">
+
+            <h2>
+
+                Add Study Session
+
+            </h2>
+
+            <div class="form-grid">
+
+                <input
+                    type="text"
+                    id="subjectInput"
+                    placeholder="Subject Name">
+
+                <input
+                    type="number"
+                    id="hoursInput"
+                    placeholder="Hours Studied">
+
+                <button
+                    id="addStudyBtn">
+
+                    Add Session
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Study Sessions -->
+
+        <section>
+
+            <div class="section-header">
+
+                <h2>
+
+                    Recent Sessions
+
+                </h2>
+
+            </div>
+
+            <div
+                id="studyContainer"
+                class="study-container">
+
+            </div>
+
+            <div
+                id="emptyState"
+                class="empty-state">
+
+                No study sessions found.
+
+            </div>
+
+        </section>
+
+        <!-- Activity Heatmap -->
+
+        <section class="calendar-section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Activity Heatmap
+
+                </h2>
+
+            </div>
+
+            <div
+                id="calendarContainer"
+                class="heatmap">
+
+            </div>
+
+        </section>
+
+        <!-- History -->
+
+        <section class="history-section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Study History
+
+                </h2>
+
+            </div>
+
+            <div
+                id="historyContainer">
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
